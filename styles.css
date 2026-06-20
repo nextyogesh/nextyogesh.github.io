@@ -745,87 +745,145 @@ section {
 /* Profile / Stats Card styling */
 .about-visual {
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.stats-card {
-  width: 100%;
-  max-width: 420px;
-  padding: var(--spacing-lg);
+.about-image-wrapper {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  margin: var(--spacing-md) auto;
+  z-index: 1;
+}
+
+@media (min-width: 576px) {
+  .about-image-wrapper {
+    width: 320px;
+    height: 420px;
+  }
+}
+
+/* Decorative background glow */
+.about-image-glow {
+  position: absolute;
+  inset: -10px;
+  background: var(--accent-gradient);
+  filter: blur(32px);
+  opacity: 0.18;
   border-radius: var(--border-radius-lg);
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+[data-theme="light"] .about-image-glow {
+  opacity: 0.08;
+  filter: blur(40px);
+}
+
+/* Portrait profile image container */
+.about-image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about-image-container:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.85);
+  transition: filter var(--transition-fast), transform var(--transition-slow);
+}
+
+.about-image-container:hover .about-profile-img {
+  filter: brightness(1.0);
+  transform: scale(1.04);
+}
+
+/* Overlapping floating stats badges */
+.about-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.6rem 1.1rem;
+  border-radius: 14px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  z-index: 10;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about-badge:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-md);
-  position: relative;
 }
 
-.stats-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-md);
-  border-bottom: 1px solid var(--border-color);
+.badge-experience {
+  bottom: -12px;
+  left: -20px;
 }
 
-.avatar-placeholder {
-  width: 60px;
-  height: 60px;
-  border-radius: var(--border-radius-full);
-  background: var(--accent-gradient);
+.badge-projects {
+  top: -12px;
+  right: -20px;
+}
+
+.badge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-glow);
+  color: var(--accent-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  flex-shrink: 0;
 }
 
-.avatar-text h4 {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.avatar-text p {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
-}
-
-.stat-item {
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+.badge-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--accent-light);
   line-height: 1.2;
 }
 
-.stat-label {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
+.badge-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
   font-weight: 500;
-  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.availability-badge {
+.badge-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+/* Availability status below the image */
+.availability-badge-about {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-xs);
@@ -836,8 +894,13 @@ section {
   font-weight: 600;
   color: var(--accent-light);
   border: 1px solid rgba(99, 102, 241, 0.2);
-  width: 100%;
+  box-shadow: var(--shadow-sm);
   justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.availability-badge-about:hover {
+  transform: translateY(-1px);
 }
 
 .pulse-dot {

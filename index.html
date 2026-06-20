@@ -220,40 +220,47 @@ console.log(<span class="code-string">`Initializing systems...`</span>);</code><
 
           <!-- Stats / Profile Visualization -->
           <div class="about-visual scroll-reveal">
-            <div class="stats-card">
-              <div class="stats-header">
-                <div class="avatar-placeholder">
-                  <span class="avatar-initials">Y</span>
-                </div>
-                <div class="avatar-text">
-                  <h4>Yogesh</h4>
-                  <p>Web Developer & Software Architect</p>
+            <div class="about-image-wrapper">
+              <!-- Decorative background glow -->
+              <div class="about-image-glow" aria-hidden="true"></div>
+              
+              <!-- Portrait profile image container -->
+              <div class="about-image-container">
+                <img src="workspace.jpg" alt="Yogesh — Full Stack Developer" class="about-profile-img">
+              </div>
+              
+              <!-- Overlapping floating stats badges -->
+              <!-- Experience Badge (bottom-left) -->
+              <div class="about-badge badge-experience">
+                <span class="badge-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </span>
+                <div class="badge-text">
+                  <span class="badge-label">Experience</span>
+                  <span class="badge-value">12+ Years</span>
                 </div>
               </div>
               
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <span class="stat-number">12+</span>
-                  <span class="stat-label">Years of Dev</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">15+</span>
-                  <span class="stat-label">Projects Built</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">500+</span>
-                  <span class="stat-label">Git Commits</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">100%</span>
-                  <span class="stat-label">Client Focus</span>
+              <!-- Projects Badge (top-right) -->
+              <div class="about-badge badge-projects">
+                <span class="badge-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </span>
+                <div class="badge-text">
+                  <span class="badge-label">Projects</span>
+                  <span class="badge-value">15+ Built</span>
                 </div>
               </div>
-              
-              <div class="availability-badge">
-                <span class="pulse-dot"></span>
-                <span>Open for freelance & full-time opportunities</span>
-              </div>
+            </div>
+            
+            <div class="availability-badge-about">
+              <span class="pulse-dot"></span>
+              <span>Open for freelance & full-time opportunities</span>
             </div>
           </div>
         </div>
