@@ -17,12 +17,12 @@ Since you already have this repository cloned, follow these steps to deploy it l
    ```
 
 2. **Enable GitHub Pages:**
-   * Go to your repository on GitHub: `https://github.com/<your-username>/nextyogesh.github.io`
+   * Go to your repository on GitHub: `https://github.com/nextyogesh/nextyogesh.github.io`
    * Click on the **Settings** tab.
    * On the left sidebar, under "Code and automation", click **Pages**.
    * Under **Build and deployment** -> **Source**, make sure **Deploy from a branch** is selected.
    * Under **Branch**, select `main` and `/ (root)`, then click **Save**.
-   * *Within 1–2 minutes, your website will be live at `https://<your-username>.github.io/nextyogesh.github.io/`!*
+   * *Within 1–2 minutes, your website will be live at `https://nextyogesh.github.io/nextyogesh.github.io/`!*
 
 ---
 

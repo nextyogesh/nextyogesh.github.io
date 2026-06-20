@@ -167,22 +167,52 @@ function initContactForm() {
     const submitBtnText = submitBtn.querySelector('span');
     const submitBtnIcon = submitBtn.querySelector('.send-icon');
 
+    // Get input values
+    const nameVal = document.getElementById('name').value;
+    const emailVal = document.getElementById('email').value;
+    const messageVal = document.getElementById('message').value;
+
     // Simulate loading state
     submitBtn.disabled = true;
     if (submitBtnText) submitBtnText.textContent = 'Sending Message...';
     if (submitBtnIcon) submitBtnIcon.style.opacity = '0.5';
 
-    // Mock API request delay
-    setTimeout(() => {
-      // Hide the form with a fade transition
-      form.style.opacity = '0';
-      
-      setTimeout(() => {
-        form.classList.add('hidden');
-        feedbackBlock.classList.remove('hidden');
-      }, 300); // Matches transition duration
-      
-    }, 1500);
+    // Send using FormSubmit AJAX
+    fetch('https://formsubmit.co/ajax/kerelene.help@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: nameVal,
+        email: emailVal,
+        message: messageVal,
+        _subject: 'New Portfolio Message from ' + nameVal
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        // Hide the form with a fade transition
+        form.style.opacity = '0';
+        setTimeout(() => {
+          form.classList.add('hidden');
+          feedbackBlock.classList.remove('hidden');
+        }, 300);
+      } else {
+        alert('Something went wrong. Please try again.');
+        submitBtn.disabled = false;
+        if (submitBtnText) submitBtnText.textContent = 'Send Message';
+        if (submitBtnIcon) submitBtnIcon.style.opacity = '1';
+      }
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      alert('Network error. Please try again.');
+      submitBtn.disabled = false;
+      if (submitBtnText) submitBtnText.textContent = 'Send Message';
+      if (submitBtnIcon) submitBtnIcon.style.opacity = '1';
+    });
   });
 }
 

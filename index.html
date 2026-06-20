@@ -142,23 +142,22 @@
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
               </div>
-              <div class="terminal-title">developer.js</div>
+              <div class="terminal-title">profile.js</div>
             </div>
             <div class="terminal-body">
               <pre><code><span class="code-keyword">const</span> developer <span class="code-operator">=</span> {
   name: <span class="code-string">'Yogesh'</span>,
-  role: <span class="code-string">'Full Stack Developer'</span>,
-  skills: [
-    <span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'Express'</span>,
-    <span class="code-string">'MongoDB'</span>, <span class="code-string">'SQL'</span>, <span class="code-string">'Tailwind'</span>
-  ],
-  passion: <span class="code-string">'Building scalable products'</span>,
-  currentFocus: <span class="code-string">'Cloud APIs & User Experience'</span>
+  roles: [<span class="code-string">'Full Stack Dev'</span>, <span class="code-string">'Data Engineer'</span>],
+  skills: {
+    data: [<span class="code-string">'PySpark'</span>, <span class="code-string">'Databricks'</span>, <span class="code-string">'Airflow'</span>, <span class="code-string">'Terraform'</span>],
+    web: [<span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'PostgreSQL'</span>]
+  },
+  algorithms: [<span class="code-string">'Blind75'</span>, <span class="code-string">'Quick/Merge Sort'</span>, <span class="code-string">'Binary Search'</span>],
+  architecture: [<span class="code-string">'Medallion'</span>, <span class="code-string">'Star/Snowflake'</span>, <span class="code-string">'CDC/SCD'</span>]
 };
 
-<span class="code-comment">// Output details</span>
-console.log(<span class="code-string">`Hello, let's build something epic!`</span>);
-</code></pre>
+<span class="code-comment">// Ready to compile</span>
+console.log(<span class="code-string">`Initializing systems...`</span>);</code></pre>
             </div>
           </div>
         </div>
@@ -234,7 +233,7 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
               
               <div class="stats-grid">
                 <div class="stat-item">
-                  <span class="stat-number">3+</span>
+                  <span class="stat-number">12+</span>
                   <span class="stat-label">Years of Dev</span>
                 </div>
                 <div class="stat-item">
@@ -392,19 +391,69 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
               </li>
             </ul>
           </div>
+
+          <!-- Skill Category 4: Data Engineering -->
+          <div class="skill-category-card scroll-reveal">
+            <div class="category-header">
+              <svg class="category-icon" style="color: #38bdf8;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <h3>Data Engineering</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <div class="skill-info">
+                  <span class="skill-name">Spark & PySpark (Databricks)</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-progress"><div class="skill-progress-bar" style="width: 90%"></div></div>
+              </li>
+              <li>
+                <div class="skill-info">
+                  <span class="skill-name">ETL Pipelines & Apache Airflow</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-progress"><div class="skill-progress-bar" style="width: 88%"></div></div>
+              </li>
+              <li>
+                <div class="skill-info">
+                  <span class="skill-name">Infrastructure as Code (Terraform)</span>
+                  <span class="skill-percent">82%</span>
+                </div>
+                <div class="skill-progress"><div class="skill-progress-bar" style="width: 82%"></div></div>
+              </li>
+              <li>
+                <div class="skill-info">
+                  <span class="skill-name">Data Modeling & Warehousing</span>
+                  <span class="skill-percent">86%</span>
+                </div>
+                <div class="skill-progress"><div class="skill-progress-bar" style="width: 86%"></div></div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Tech Stack Pills -->
         <div class="tech-pills scroll-reveal">
+          <span class="pill">PySpark</span>
+          <span class="pill">Databricks</span>
+          <span class="pill">Apache Airflow</span>
+          <span class="pill">Terraform</span>
+          <span class="pill">Elasticsearch</span>
+          <span class="pill">Star & Snowflake Schema</span>
+          <span class="pill">CDC & SCD (Type 2)</span>
+          <span class="pill">Lambda & Kappa Architecture</span>
+          <span class="pill">Binary Search</span>
+          <span class="pill">Quick/Merge Sort</span>
+          <span class="pill">Blind75</span>
+          <span class="pill">AWS Cloud Services</span>
           <span class="pill">Vite</span>
-          <span class="pill">Webpack</span>
           <span class="pill">Postman</span>
           <span class="pill">JWT Auth</span>
           <span class="pill">npm / yarn</span>
-          <span class="pill">EJS</span>
           <span class="pill">Responsive Layouts</span>
-          <span class="pill">CSS Grid & Flexbox</span>
-          <span class="pill">Markdown</span>
         </div>
       </div>
     </section>
@@ -417,33 +466,95 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
           <p class="section-subtitle">A showcase of full-stack systems, dynamic interfaces, and utilities I have engineered.</p>
         </div>
 
-        <!-- Project Filtering Tabs -->
         <div class="project-filters scroll-reveal">
           <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="frontend">Frontend</button>
-          <button class="filter-btn" data-filter="backend">Backend</button>
-          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="fintech">Fintech</button>
+          <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="filter-btn" data-filter="education">Education</button>
+          <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+          <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
         </div>
 
         <!-- Project Grid -->
         <div class="project-grid">
-          <!-- Project 1 -->
-          <article class="project-card scroll-reveal" data-category="fullstack">
+          <!-- Project 1: FinTech -->
+          <article class="project-card scroll-reveal" data-category="fintech">
             <div class="project-banner">
-              <span class="project-category">Full Stack</span>
+              <span class="project-category">Fintech</span>
               <div class="project-visual-mock font-code">
-                <span>[Dashboard App]</span>
+                <span>[Python Ledger]</span>
                 <span class="blink-cursor">_</span>
               </div>
             </div>
             <div class="project-details">
-              <h3 class="project-card-title">TaskForge Workspace</h3>
-              <p class="project-description">A real-time workspace platform allowing teams to manage tasks, collaborate on Kanban boards, and view custom progress analytics dashboards.</p>
+              <h3 class="project-card-title">Fintech Data Processor</h3>
+              <p class="project-description">A high-performance transaction processing engine and ledger system designed for low-latency calculations and serverless scalability.</p>
               
               <ul class="project-bullets">
-                <li>Designed dynamic REST APIs using Node.js, Express, and MongoDB.</li>
-                <li>Engineered fully responsive user dashboard using React and Tailwind CSS.</li>
-                <li>Configured JWT authentication with access and refresh token cookie flows.</li>
+                <li>Built secure serverless processing routes utilizing Python, FastAPI, and AWS Lambda.</li>
+                <li>Configured access authentication flows using AWS Cognito identity pools.</li>
+                <li>Designed relational ledger architectures inside AWS RDS PostgreSQL databases.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">AWS Lambda</span>
+                <span class="tag">Cognito</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+
+
+            </div>
+          </article>
+
+          <!-- Project 2: Stock Market - Algo Trading -->
+          <article class="project-card scroll-reveal" data-category="fintech">
+            <div class="project-banner">
+              <span class="project-category">Stock Market</span>
+              <div class="project-visual-mock font-code">
+                <span>[Go Trading Engine]</span>
+                <span class="blink-cursor">_</span>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-card-title">Algo Trading Solution</h3>
+              <p class="project-description">A real-time high-frequency trading engine that streams market data, processes metrics, and executes orders automatically.</p>
+              
+              <ul class="project-bullets">
+                <li>Engineered concurrent order routing services in Go utilizing channel pipelines.</li>
+                <li>Integrated webhooks with Zerodha and Groww API feeds for automated trade execution.</li>
+                <li>Created transaction management dashboard using React, Vite, and PostgreSQL.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="tag">Go (Golang)</span>
+                <span class="tag">React</span>
+                <span class="tag">Vite</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">API Integration</span>
+              </div>
+
+
+            </div>
+          </article>
+
+          <!-- Project 3: Education - Coaching Management -->
+          <article class="project-card scroll-reveal" data-category="education">
+            <div class="project-banner">
+              <span class="project-category">Education</span>
+              <div class="project-visual-mock font-code">
+                <span>[Coaching ERP]</span>
+                <span class="blink-cursor">_</span>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-card-title">Coaching Center Portal</h3>
+              <p class="project-description">A comprehensive ERP platform for coaching institutes, organizing schedules, student progress reporting, and invoicing.</p>
+              
+              <ul class="project-bullets">
+                <li>Designed unified dashboards tracking classes, batches, attendance logs, and staff shifts.</li>
+                <li>Integrated Twilio messaging triggers for real-time notification alerts sent to parents.</li>
+                <li>Built invoicing and fee tracking systems with Node.js, Express, and MongoDB.</li>
               </ul>
 
               <div class="project-tags">
@@ -453,112 +564,189 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
                 <span class="tag">Express</span>
               </div>
 
-              <div class="project-links">
-                <a href="#" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" x2="21" y1="14" y2="3"></line>
-                  </svg>
-                  <span>Live Demo</span>
-                </a>
-                <a href="#" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span>Repository</span>
-                </a>
-              </div>
+
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="project-card scroll-reveal" data-category="frontend">
+          <!-- Project 4: Education - Course Selling -->
+          <article class="project-card scroll-reveal" data-category="education">
             <div class="project-banner">
-              <span class="project-category">Frontend</span>
+              <span class="project-category">Education</span>
               <div class="project-visual-mock font-code">
-                <span>[Storefront UI]</span>
+                <span>[E-Learning Hub]</span>
                 <span class="blink-cursor">_</span>
               </div>
             </div>
             <div class="project-details">
-              <h3 class="project-card-title">Apex E-Commerce Store</h3>
-              <p class="project-description">A blazing-fast, modern e-commerce storefront landing page featuring advanced client-side filtering, cart states, and beautiful checkout steps.</p>
+              <h3 class="project-card-title">Course Selling Platform</h3>
+              <p class="project-description">A modern content delivery network and storefront allowing students to purchase and stream video educational courses.</p>
               
               <ul class="project-bullets">
-                <li>Built using modern HTML5 semantic markup and CSS Flexbox/Grid structures.</li>
-                <li>Created a customized dark mode and smooth animations using pure CSS transitions.</li>
-                <li>Implemented fully offline cart persistence using browser LocalStorage.</li>
+                <li>Created fluid frontend navigation using Next.js Server Components and Tailwind CSS.</li>
+                <li>Integrated Stripe payment APIs to support single purchases and recurring monthly tiers.</li>
+                <li>Managed schema indexing and data mapping using Prisma ORM with PostgreSQL.</li>
               </ul>
 
               <div class="project-tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">Vanilla CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">LocalStorage</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Stripe</span>
+                <span class="tag">Prisma</span>
               </div>
 
-              <div class="project-links">
-                <a href="#" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" x2="21" y1="14" y2="3"></line>
-                  </svg>
-                  <span>Live Demo</span>
-                </a>
-                <a href="#" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span>Repository</span>
-                </a>
-              </div>
+
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="project-card scroll-reveal" data-category="backend">
+          <!-- Project 5: Hotel Management & Inventory -->
+          <article class="project-card scroll-reveal" data-category="enterprise">
             <div class="project-banner">
-              <span class="project-category">Backend</span>
+              <span class="project-category">Hotel</span>
               <div class="project-visual-mock font-code">
-                <span>[Secure API]</span>
+                <span>[Hotel ERP]</span>
                 <span class="blink-cursor">_</span>
               </div>
             </div>
             <div class="project-details">
-              <h3 class="project-card-title">Secured Gateway API</h3>
-              <p class="project-description">A secure enterprise API gateway microservice configured with rate limiting, logging integration, and OAuth2 validation wrappers.</p>
+              <h3 class="project-card-title">Hotel & Inventory System</h3>
+              <p class="project-description">An enterprise resource planning web application to control room statuses, log bookings, track assets, and manage shifts.</p>
               
               <ul class="project-bullets">
-                <li>Integrated Express-Rate-Limit and Helmet.js to prevent brute-force attacks.</li>
-                <li>Utilized SQL connection pooling to handle up to 300 requests/sec with minimal memory leak.</li>
-                <li>Developed automated test suites using Mocha & Chai to ensure absolute route reliability.</li>
+                <li>Built real-time visual tracking boards for room booking statuses and cleaning logs.</li>
+                <li>Designed inventory tracker modules monitoring assets and food supply parameters.</li>
+                <li>Utilized Node.js, Express, and MySQL databases for reliable relational data logs.</li>
               </ul>
 
               <div class="project-tags">
+                <span class="tag">React</span>
                 <span class="tag">Node.js</span>
+                <span class="tag">MySQL</span>
                 <span class="tag">Express</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Helmet</span>
               </div>
 
-              <div class="project-links">
-                <a href="#" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" x2="21" y1="14" y2="3"></line>
-                  </svg>
-                  <span>Live Demo</span>
-                </a>
-                <a href="#" class="project-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span>Repository</span>
-                </a>
+
+            </div>
+          </article>
+
+          <!-- Project 6: Ecommerce -->
+          <article class="project-card scroll-reveal" data-category="ecommerce">
+            <div class="project-banner">
+              <span class="project-category">Ecommerce</span>
+              <div class="project-visual-mock font-code">
+                <span>[Product Storefront]</span>
+                <span class="blink-cursor">_</span>
               </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-card-title">Ecommerce Selling Platform</h3>
+              <p class="project-description">A responsive online shop supporting dynamic search query filters, item cart updates, and secure user billing checks.</p>
+              
+              <ul class="project-bullets">
+                <li>Created reactive shopping checkout workflows using Redux Toolkit slices.</li>
+                <li>Implemented offline shopping cart backup states using LocalStorage parameters.</li>
+                <li>Designed product databases and structured collection documents inside MongoDB.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Redux Toolkit</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+
+
+            </div>
+          </article>
+
+          <!-- Project 7: HR & Consultancy -->
+          <article class="project-card scroll-reveal" data-category="enterprise">
+            <div class="project-banner">
+              <span class="project-category">HR & Consultancy</span>
+              <div class="project-visual-mock font-code">
+                <span>[Recruitment CRM]</span>
+                <span class="blink-cursor">_</span>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-card-title">Consultancy Portal</h3>
+              <p class="project-description">A professional job matching and tracking CRM solution for consultancy agents to coordinate resume pipelines and interviews.</p>
+              
+              <ul class="project-bullets">
+                <li>Designed candidate profile views with inline file resume uploads and status workflows.</li>
+                <li>Configured fast resume indexing algorithms using PostgreSQL full-text search parameters.</li>
+                <li>Integrated Google Calendar APIs to automatically coordinate recruiter/candidate schedules.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">REST APIs</span>
+              </div>
+
+
+            </div>
+          </article>
+
+          <!-- Project 8: Data Engineering Lakehouse -->
+          <article class="project-card scroll-reveal" data-category="data-engineering">
+            <div class="project-banner">
+              <span class="project-category">Data Engineering</span>
+              <div class="project-visual-mock font-code">
+                <span>[Lakehouse ETL]</span>
+                <span class="blink-cursor">_</span>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-card-title">Cloud Data Lakehouse</h3>
+              <p class="project-description">An end-to-end cloud data storage and ETL processing system implementing Medallion tables orchestrated via scheduled triggers.</p>
+              
+              <ul class="project-bullets">
+                <li>Formulated multi-tier Medallion architecture (Bronze -> Silver -> Gold layers) inside Databricks using PySpark.</li>
+                <li>Designed automated Apache Airflow DAG files handling scheduled and event-based tumbling window pipelines.</li>
+                <li>Wrote Terraform scripts provisioning secure cloud infrastructure (S3 data lakes, access control, Redshift warehousing).</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="tag">PySpark</span>
+                <span class="tag">Databricks</span>
+                <span class="tag">Apache Airflow</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">AWS Cloud</span>
+              </div>
+
+
+            </div>
+          </article>
+
+          <!-- Project 9: CDC Log Streamer -->
+          <article class="project-card scroll-reveal" data-category="data-engineering">
+            <div class="project-banner">
+              <span class="project-category">Data Engineering</span>
+              <div class="project-visual-mock font-code">
+                <span>[CDC Log Stream]</span>
+                <span class="blink-cursor">_</span>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3 class="project-card-title">Real-Time CDC Log Analyzer</h3>
+              <p class="project-description">A real-time Change Data Capture streaming pipeline logging database transactions and indexing analytics counts.</p>
+              
+              <ul class="project-bullets">
+                <li>Designed event-driven CDC pipelines to log transactional database mutations dynamically using Python.</li>
+                <li>Modeled data warehousing warehouses using Star and Snowflake schemas, applying SCD Type 2 query formats.</li>
+                <li>Streamed log messages through Apache Kafka partitions into Elasticsearch clusters for search dashboarding.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">Elasticsearch</span>
+                <span class="tag">Star Schema</span>
+                <span class="tag">SCD Type 2</span>
+              </div>
+
+
             </div>
           </article>
         </div>
@@ -580,7 +768,7 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
             <p>Feel free to reach out via email or connect with me through my social profiles. I will respond to your queries as soon as possible.</p>
             
             <div class="contact-details-list">
-              <a href="mailto:yogesh@example.com" class="contact-detail-item">
+              <a href="mailto:kerelene.help@gmail.com" class="contact-detail-item">
                 <div class="contact-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="m22 7-8.99 5.72a2 2 0 0 1-2.01 0L2 7"></path>
@@ -589,11 +777,11 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
                 </div>
                 <div>
                   <span class="detail-label">Email</span>
-                  <span class="detail-value">yogesh@example.com</span>
+                  <span class="detail-value">kerelene.help@gmail.com</span>
                 </div>
               </a>
 
-              <a href="https://github.com/yogesh" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+              <a href="https://github.com/nextyogesh" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
                 <div class="contact-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -601,10 +789,11 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
                 </div>
                 <div>
                   <span class="detail-label">GitHub</span>
-                  <span class="detail-value">github.com/yogesh</span>
+                  <span class="detail-value">github.com/nextyogesh</span>
                 </div>
               </a>
 
+              <!-- 
               <a href="https://linkedin.com/in/yogesh" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
                 <div class="contact-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -618,6 +807,7 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
                   <span class="detail-value">linkedin.com/in/yogesh</span>
                 </div>
               </a>
+              -->
 
               <div class="contact-detail-item">
                 <div class="contact-icon">
@@ -687,13 +877,15 @@ console.log(<span class="code-string">`Hello, let's build something epic!`</span
       </div>
       <p class="copyright">&copy; <span id="current-year">2026</span> Yogesh. All rights reserved.</p>
       <div class="footer-socials">
-        <a href="https://github.com/yogesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/nextyogesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
         </a>
+        <!-- 
         <a href="https://linkedin.com/in/yogesh" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="mailto:yogesh@example.com" aria-label="Email">
+        -->
+        <a href="mailto:kerelene.help@gmail.com" aria-label="Email">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.99 5.72a2 2 0 0 1-2.01 0L2 7"></path><rect width="20" height="16" x="2" y="4" rx="2"></rect></svg>
         </a>
       </div>
